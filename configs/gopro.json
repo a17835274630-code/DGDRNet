@@ -1,0 +1,31 @@
+{
+  "model": {
+    "width": 48,
+    "expansion": 2,
+    "use_dsmee": true,
+    "use_dfem": true,
+    "edge_guidance": true,
+    "branches": ["small", "medium", "large"],
+    "gate_hidden": 96,
+    "fft_norm": "ortho",
+    "spectral_eps": 1e-8
+  },
+  "loss": {
+    "weighted_pixel": true,
+    "eps": 0.001,
+    "beta": 0.95,
+    "edge_weight": 0.05,
+    "spectral_weight": 0.1,
+    "kernel_weight": 0.0001,
+    "fft_norm": "ortho"
+  },
+  "use_annotations": false,
+  "image_size": 512,
+  "epochs": 500,
+  "batch_size": 2,
+  "learning_rate": 0.0002,
+  "minimum_learning_rate": 0.000001,
+  "weight_decay": 0.0001,
+  "reference_batches": 20,
+  "seed": 3407
+}
